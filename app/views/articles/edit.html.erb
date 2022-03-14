@@ -1,0 +1,16 @@
+<div class="container-lg">
+    <div class="row justify-content-md-center">
+        <div class="col-8 d-flex justify-content-between align-items-center my-4">
+            <h1>Editing article</h1>
+            <%= link_to "Back to articles", articles_path, class: "btn btn-outline-secondary" %>
+        </div>
+    </div>
+
+    <div class="row justify-content-md-center">
+        <div class="col-8 bg-light p-4 rounded border">
+        <%= render "form", article: @article %>
+        </div>
+    </div>
+
+
+</div>

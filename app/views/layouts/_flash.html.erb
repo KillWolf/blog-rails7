@@ -1,0 +1,12 @@
+
+<div class="container-lg">
+    <div class="row justify-content-center">
+        <div class="col-8">
+            <% flash.each do |name, msg| %>
+                <div class="alert alert-success">
+                    <%= msg %>
+                <div>
+            <% end %>
+        </div>
+    </div>
+</div>

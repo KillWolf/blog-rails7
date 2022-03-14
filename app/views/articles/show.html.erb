@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-8 mt-4">
+            <div class="card text-center">
+                <div class="card-header">
+                    by Jacob
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title"><%= @article.title %></h5>
+                    <p class="card-text"><%= simple_format(@article.description) %></p>
+                    <div class="d-flex justify-content-center gap-3">
+                        <%= button_to "Edit", edit_article_path(@article), method: :get, class: "btn btn-primary" %>
+                        <%= button_to "Delete", @article, method: :delete, class: "btn btn-primary" %>
+                    </div>
+                </div>
+                <div class="card-footer text-muted">
+                    Created <%= time_ago_in_words(@article.created_at) %> ago, edited  <%= time_ago_in_words(@article.updated_at) %> ago
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
